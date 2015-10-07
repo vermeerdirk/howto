@@ -35,8 +35,9 @@ Installing iptables-persistent will allow you to also save current rules.
 ### todo: figure out what happened since ..  ###
 
 this doesn't work anymore as of october 2015 (probably earlier but that's when I noticed)
-	#sudo /etc/init.d/iptables-persistent save 
-    #sudo /etc/init.d/iptables-persistent reload	
+	
+	#sudo /etc/init.d/iptables-persistent save
+	#sudo /etc/init.d/iptables-persistent reload	
 
 	
 check manuals tutorials flamewars : init.d vs systemd / netfilter-persistent
