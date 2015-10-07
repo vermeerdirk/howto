@@ -53,8 +53,8 @@ Add node to PATH
 Edit profile so it resembles this:
 
     ...
-	NODE_JS_HOME=”/opt/node”
-	PATH=”$PATH:$NODE_JS_HOME/bin”
+	NODE_JS_HOME="/opt/node"
+	PATH="$PATH:$NODE_JS_HOME/bin"
 	export PATH
 	...
 
