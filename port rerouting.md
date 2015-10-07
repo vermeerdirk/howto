@@ -1,4 +1,4 @@
-# Rerouting ports with iptables # 
+# Rerouting ports with iptables #
 10/7/2015
 
 ### Set iptables prerouting ###
@@ -18,7 +18,7 @@ Installing iptables-persistent will allow you to also save current rules.
 	sudo apt-get install iptables-persistent
 	
 
-### Save additional changes again ###	
+### Save additional changes again ###
 
  this works for saving changes if iptables-persistent is already installed:
 
