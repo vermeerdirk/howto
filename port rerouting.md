@@ -25,6 +25,8 @@ Installing iptables-persistent will allow you to also save current rules.
 	sudo dpkg-reconfigure -y iptables-persistent
 
 
+https://en.wikipedia.org/wiki/Cheerleading
+
 
 ----------
 
