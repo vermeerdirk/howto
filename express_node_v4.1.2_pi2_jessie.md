@@ -43,15 +43,17 @@ Make it look like this:
  		res.send('Hello World!');
 	});
 
-	app.listen(9999);
-
-	console.log('Express server listening on 9999');
-
+	console.log('Starting express webserver');
+	var server = app.listen(9999, function(){
+  		console.log('Express listening on port 9999');
+  		console.log('...');
+	});
+	console.log('Script end');
 Finally:
 
 	node testexpress.js
 
-Use brower and go to:
+Use browser and go to:
 
 	http://<rpi2 ipnr>:9999
 
