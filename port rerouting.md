@@ -26,7 +26,7 @@ Installing iptables-persistent will allow you to also save current rules.
 
 ### Remove an existing rule:
 
-sudo iptables -t nat -D PREROUTING -i eth0 -p tcp --dport 4000 -j REDIRECT --to-port 7000
+	sudo iptables -t nat -D PREROUTING -i eth0 -p tcp --dport 4000 -j REDIRECT --to-port 7000
 
 https://en.wikipedia.org/wiki/Cheerleading
 
