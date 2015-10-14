@@ -24,6 +24,9 @@ Installing iptables-persistent will allow you to also save current rules.
 
 	sudo dpkg-reconfigure -y iptables-persistent
 
+### Remove an existing rule:
+
+sudo iptables -t nat -D PREROUTING -i eth0 -p tcp --dport 4000 -j REDIRECT --to-port 7000
 
 https://en.wikipedia.org/wiki/Cheerleading
 
@@ -37,7 +40,9 @@ https://en.wikipedia.org/wiki/Cheerleading
 ### todo: figure out what happened since ..  ###
 
 this doesn't work anymore as of october 2015 (probably earlier but that's when I noticed)
+
 (version: 0.5.7) (apt-cache show iptables-persistent)
+
 	#sudo /etc/init.d/iptables-persistent save
 	#sudo /etc/init.d/iptables-persistent reload	
 
