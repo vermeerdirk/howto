@@ -22,7 +22,7 @@ Installing iptables-persistent will allow you to also save current rules.
 
  this works for saving changes if iptables-persistent is already installed: (v 1.0.3)
 
-	sudo dpkg-reconfigure -y iptables-persistent
+	sudo dpkg-reconfigure iptables-persistent
 
 ### Remove an existing rule:
 
