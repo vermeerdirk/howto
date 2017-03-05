@@ -1,0 +1,43 @@
+# backup: /etc/nginx/sites-available/default
+# edit:   /etc/nginx/sites-available/default
+# after edit: restart nginx: service nginx restart
+
+# replace <portnr1> : nginx listening portnr           
+# replace <portnr2> : nodjs listening portnr
+# replace <ipnr1> : nginx ipnr
+# replace <ipnr2> : nodejs listening ipnr
+# replace <subfolder1> (2x)				Beware with the slashes!! location/ .. only 1, rewrite 2  ^/..../? ...							
+# replace <ipnr0> : nodejs listening ipnr mainsite
+# replace <portnr0> : nodejs listening portnr mainsite
+
+server {
+    listen <portnr>;
+    server_name <ipnr1>;
+
+
+   location /<subfolder1> {
+        # rewrite : make sure all path are relative to ..
+	rewrite ^/<subfolder1>/?(.*) /$1 break;
+        proxy_pass http://<ipnr2>:<portnr2>;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+    
+    location / {
+        proxy_pass http://<ipnr0>:<portnr0>;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    
+
+    
+}
+
+
