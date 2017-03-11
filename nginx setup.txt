@@ -6,7 +6,7 @@
 # replace <portnr2> : nodjs listening portnr
 # replace <ipnr1> : nginx ipnr
 # replace <ipnr2> : nodejs listening ipnr
-# replace <subfolder1> (2x)				Beware with the slashes!! location/ .. only 1, rewrite 2  ^/..../? ...							
+# replace <subfolder1> (2x)				Beware with the slashes!! 						
 # replace <ipnr0> : nodejs listening ipnr mainsite
 # replace <portnr0> : nodejs listening portnr mainsite
 
