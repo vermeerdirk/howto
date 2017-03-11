@@ -15,10 +15,10 @@ server {
     server_name <ipnr1>;
 
 
-   location /<subfolder1> {
+   location /<subfolder1>/ {
         # rewrite : make sure all path are relative to ..
-	rewrite ^/<subfolder1>/?(.*) /$1 break;
-        proxy_pass http://<ipnr2>:<portnr2>;
+	# rewrite ^/<subfolder1>/?(.*) /$1 break;
+        proxy_pass http://<ipnr2>:<portnr2>/;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
